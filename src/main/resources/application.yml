@@ -1,0 +1,39 @@
+spring:
+  # 数据库
+  datasource:
+    username: root
+    password: moranxiangai0702
+    url: jdbc:mysql://localhost:3306/mybatis_plus?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      pool-name: MyHikariCP
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+  # 热部署
+  devtools:
+    restart:
+      enabled: true
+
+  # 开发环境
+  profiles:
+    active: dev
+
+
+#配置文件
+mybatis-plus:
+  # sql语句控制台输出configuration:log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  # 扫描mapper下.xml文件
+  mapper-locations: classpath:/mapper/**.xml
+
+
+#服务器配置
+server:
+  # 端口号
+  port: 8081
+
