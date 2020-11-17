@@ -24,3 +24,7 @@ rebel.xml
 ### Other ###
 logs/
 temp/
+/.mvn/wrapper/MavenWrapperDownloader.java
+/.mvn/wrapper/maven-wrapper.jar
+/mvnw
+/mvnw.cmd
